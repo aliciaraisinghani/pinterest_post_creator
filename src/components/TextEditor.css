@@ -1,0 +1,113 @@
+.text-editor {
+  width: 100%;
+}
+
+.character-count {
+  font-size: 0.75rem;
+  color: #718096;
+  text-align: right;
+  margin-top: 0.25rem;
+}
+
+.font-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.font-option {
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  background: white;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.font-option:hover {
+  border-color: #cbd5e0;
+}
+
+.font-option.active {
+  background: #4299e1;
+  border-color: #4299e1;
+  color: white;
+}
+
+/* Make color options larger on mobile for easier touch */
+.color-option {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Position button group styling */
+.button-group .option-button {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.8rem;
+}
+
+/* Mobile responsiveness */
+@media (min-width: 480px) {
+  .font-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .font-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .button-group .option-button {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .font-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Enhanced button styles for better mobile UX */
+.button-group {
+  gap: 0.75rem;
+}
+
+.option-button {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.option-button:active {
+  transform: scale(0.98);
+}
+
+/* Slider enhancements for mobile */
+.slider {
+  height: 8px;
+  background: linear-gradient(to right, #e2e8f0 0%, #4299e1 50%, #e2e8f0 100%);
+}
+
+.slider::-webkit-slider-thumb {
+  width: 24px;
+  height: 24px;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

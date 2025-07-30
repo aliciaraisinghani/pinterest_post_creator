@@ -1,0 +1,61 @@
+.canvas-editor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.canvas-container {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 1rem;
+}
+
+.preview-canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.canvas-info {
+  font-size: 0.75rem;
+  color: #718096;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  .canvas-container {
+    padding: 0.5rem;
+  }
+  
+  .preview-canvas {
+    max-width: calc(100vw - 4rem);
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 481px) and (max-width: 768px) {
+  .preview-canvas {
+    max-width: 400px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+  .preview-canvas {
+    max-width: 450px;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  .preview-canvas {
+    max-width: 500px;
+  }
+}
